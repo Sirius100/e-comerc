@@ -1,0 +1,32 @@
+.up::before, .down::after {
+  content: ''; 
+  position: absolute; /* Абсолютное позиционирование */
+  left: -2px;
+  border: 10px solid transparent; /* Прозрачные границы */
+}
+.up::before {
+  bottom: 1px; /* Положение треугольника */
+  border-bottom: 10px solid #525252; /* Добавляем треугольник */
+}
+.down::after {
+  bottom: -7px; /* Положение треугольника */
+  border-top: 10px solid #525252; /* Добавляем треугольник */
+}
+.up, .down {
+  position: relative;
+  display: block;
+  top: -3px;
+  left: 85px;
+  width: 10px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.counter{
+  min-width: 35px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+}

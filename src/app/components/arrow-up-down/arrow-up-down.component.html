@@ -1,0 +1,23 @@
+<div class="relative right-2.5 flex mt-3 align-middle mx-auto">
+  
+  <button 
+    (click)="addProductBuy()" 
+  >
+    <fa-icon [ngClass]="{
+      'text-red-600': !product_basket,
+      'text-lime-600': product_basket}"
+       [icon]="cart" [size]="'2x'">
+    </fa-icon>
+  </button>
+  <div>
+    <span 
+      (click)="countUp()"
+      class="up"></span>
+    <span
+      (click)="countDown()"
+      class="down"></span>
+  </div>
+
+  <div class="counter">{{ count }}</div>
+  <span class=" ml-1 flex align-middle">шт</span>
+</div>
