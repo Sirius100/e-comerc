@@ -1,0 +1,20 @@
+<div>
+  
+  <ng-container *ngIf="loading">
+    <app-loader/>
+  </ng-container>
+
+  <ng-container *ngIf="!loading">
+    <app-header/>
+
+    <div class="max-w-6xl container mt-24 mx-auto pt-7 flex flex-wrap justify-around items-start bg-gray-400">
+
+      <app-product
+        *ngFor="let product of products let i = index"
+        [product]="product"/>
+
+    </div>
+    <app-footer/>
+  </ng-container>
+
+</div>
